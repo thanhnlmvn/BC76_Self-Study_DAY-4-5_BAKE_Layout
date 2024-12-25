@@ -31,6 +31,11 @@ header {
 .header__content {
   width: 70%;
   margin: 0 auto;
+
+  /* Flexbox */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .header__content ul {
@@ -40,6 +45,14 @@ header {
 .header__content a {
   text-decoration: none;
   color: white;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  transition: all 0.5s;
+}
+
+.header__content a:hover {
+  color: #ff0e83;
 }
 
 .header__content p {
@@ -50,4 +63,5 @@ header {
 
 .header__content li {
   display: inline;
+  margin: 0 1rem;
 }

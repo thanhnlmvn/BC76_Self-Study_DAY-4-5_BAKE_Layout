@@ -115,7 +115,26 @@
     </section>
 
     <!-- number -->
-    <section class="number"></section>
+    <section class="number">
+      <div class="number__content">
+        <div class="number__item">
+          <p class="counter">3500</p>
+          <p>Coffee</p>
+        </div>
+        <div class="number__item">
+          <p class="counter">650</p>
+          <p>Happy Client</p>
+        </div>
+        <div class="number__item">
+          <p class="counter">10</p>
+          <p>Experience</p>
+        </div>
+        <div class="number__item">
+          <p class="counter">1010</p>
+          <p>Expert Worker</p>
+        </div>
+      </div>
+    </section>
 
     <!-- services -->
     <section class="services"></section>
@@ -134,5 +153,27 @@
 
     <!-- footer -->
     <footer></footer>
+
+    <!-- Thư viện hỗ trợ Jquery giúp  chạy hiệu ứng của các thư viện animation -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- Jquery waypoints -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"
+      integrity="sha512-CEiA+78TpP9KAIPzqBvxUv8hy41jyI3f2uHi7DGp/Y/Ka973qgSdybNegWFciqh6GrN2UePx2KkflnQUbUhNIA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- CountUp JS  -->
+    <script src="./js/jquery.countup.js"></script>
+    <script>
+      $('.counter').countUp();
+    </script>
   </body>
 </html>

@@ -193,3 +193,32 @@ header {
 .intro .intro__item:nth-child(6) {
   background-color: #836eaa;
 }
+
+/* number */
+.number {
+  padding: 70px 0;
+}
+
+.number__content {
+  display: flex;
+  width: 70%;
+  margin: 0 auto;
+  justify-content: space-around;
+  text-align: center;
+}
+
+/* first-of-type tìm loại thẻ đầu tiên trong selector */
+.number__item p:first-of-type {
+  font-size: 2rem;
+  color: #4e2a84;
+  font-weight: bold;
+}
+
+/* last-of-type tìm loại thẻ cuối trong selector */
+.number__item p:last-of-type {
+  font-size: 1.4rem;
+  color: black;
+  font-weight: 700;
+  letter-spacing: 4px;
+  padding: 24px 0;
+}

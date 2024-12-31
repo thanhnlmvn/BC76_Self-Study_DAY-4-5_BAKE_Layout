@@ -22,6 +22,9 @@
       referrerpolicy="no-referrer"
     />
 
+    <!-- Light Box -->
+    <link rel="stylesheet" href="./css/lightbox.css" />
+
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="./css/index.css" />
   </head>
@@ -172,31 +175,58 @@
       <h2>OUR GALLERY</h2>
       <div class="gallery__content">
         <figure class="gallery__item gallery__g1">
-          <img src="./img/g1.jpg" alt="gallery1" />
-          <figcaption class="gallery__overlay">
-            <h3><span>OUR</span>GALLERY</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-          </figcaption>
+          <a href="./img/g1.jpg" data-lightbox="gallery">
+            <img src="./img/g1.jpg" alt="gallery1" />
+            <figcaption class="gallery__overlay">
+              <h3><span>OUR</span>GALLERY</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </figcaption>
+          </a>
         </figure>
         <figure class="gallery__item">
-          <img src="./img/g2.jpg" alt="gallery2" />
-          <!-- <figcaption></figcaption> -->
+          <a href="./img/g2.jpg" data-lightbox="gallery">
+            <img src="./img/g2.jpg" alt="gallery2" />
+            <figcaption class="gallery__overlay">
+              <h3><span>OUR</span>GALLERY</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </figcaption>
+          </a>
         </figure>
         <figure class="gallery__item">
-          <img src="./img/g3.jpg" alt="gallery3" />
-          <!-- <figcaption></figcaption> -->
+          <a href="./img/g3.jpg" data-lightbox="gallery">
+            <img src="./img/g3.jpg" alt="gallery3" />
+            <figcaption class="gallery__overlay">
+              <h3><span>OUR</span>GALLERY</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </figcaption>
+          </a>
         </figure>
         <figure class="gallery__item">
-          <img src="./img/g4.jpg" alt="gallery4" />
-          <!-- <figcaption></figcaption> -->
+          <a href="./img/g4.jpg" data-lightbox="gallery">
+            <img src="./img/g4.jpg" alt="gallery4" />
+            <figcaption class="gallery__overlay">
+              <h3><span>OUR</span>GALLERY</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </figcaption>
+          </a>
         </figure>
         <figure class="gallery__item">
-          <img src="./img/g5.jpg" alt="gallery5" />
-          <!-- <figcaption></figcaption> -->
+          <a href="./img/g5.jpg" data-lightbox="gallery">
+            <img src="./img/g5.jpg" alt="gallery5" />
+            <figcaption class="gallery__overlay">
+              <h3><span>OUR</span>GALLERY</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </figcaption>
+          </a>
         </figure>
         <figure class="gallery__item gallery__g6">
-          <img src="./img/g6.jpg" alt="gallery6" />
-          <!-- <figcaption></figcaption> -->
+          <a href="./img/g6.jpg" data-lightbox="gallery">
+            <img src="./img/g6.jpg" alt="gallery6" />
+            <figcaption class="gallery__overlay">
+              <h3><span>OUR</span>GALLERY</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </figcaption>
+          </a>
         </figure>
       </div>
     </section>
@@ -234,5 +264,8 @@
     <script>
       $('.counter').countUp();
     </script>
+
+    <!-- light box -->
+    <script src="./js/lightbox.js"></script>
   </body>
 </html>

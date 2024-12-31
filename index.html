@@ -25,6 +25,10 @@
     <!-- Light Box -->
     <link rel="stylesheet" href="./css/lightbox.css" />
 
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="./css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="./css/owl.theme.default.min.css" />
+
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="./css/index.css" />
   </head>
@@ -359,7 +363,40 @@
     </section>
 
     <!-- feedback -->
-    <section class="feedback"></section>
+    <section class="feedback">
+      <h2>TESTIMONIALS</h2>
+      <div class="feedback__content">
+        <div class="owl-carousel owl-theme">
+          <div class="item">
+            <p>
+              <i class="fa-solid fa-quote-left"></i> Lorem ipsum dolor sit amet
+              consectetur, adipisicing elit. Ipsa molestiae, error recusandae
+              facere quam nobis aspernatur voluptatem ratione dicta qui.
+              <i class="fa-solid fa-quote-right"></i>
+            </p>
+            <p class="feedback__name">MARK</p>
+          </div>
+          <div class="item">
+            <p>
+              <i class="fa-solid fa-quote-left"></i> Lorem ipsum dolor sit amet
+              consectetur, adipisicing elit. Ipsa molestiae, error recusandae
+              facere quam nobis aspernatur voluptatem ratione dicta qui.
+              <i class="fa-solid fa-quote-right"></i>
+            </p>
+            <p class="feedback__name">ALLY</p>
+          </div>
+          <div class="item">
+            <p>
+              <i class="fa-solid fa-quote-left"></i> Lorem ipsum dolor sit amet
+              consectetur, adipisicing elit. Ipsa molestiae, error recusandae
+              facere quam nobis aspernatur voluptatem ratione dicta qui.
+              <i class="fa-solid fa-quote-right"></i>
+            </p>
+            <p class="feedback__name">WILLSON</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- contact -->
     <section class="contact"></section>
@@ -391,5 +428,20 @@
 
     <!-- light box -->
     <script src="./js/lightbox.js"></script>
+
+    <!-- owl carousel -->
+    <script src="./js/owl.carousel.min.js"></script>
+    <script>
+      $('.owl-carousel').owlCarousel({
+        loop: true,
+        nav: false,
+        autoplay: true,
+        responsive: {
+          0: {
+            items: 1,
+          },
+        },
+      });
+    </script>
   </body>
 </html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="" method="get">
+      <!-- action sẽ truyền vào đường dẫn nhận dữ liệu để xử lý -->
+      <!-- method phương thức get lấy giá trị name đẩy thông tin trên http -->
+      <!-- phương thức post cũng tương tự tuy nhiên sẽ không hiển thị trên http nên sử dụng khi các thông tin được bảo mật như password, thẻ ngân hàng,... -->
+
+      <label for="name">Name</label>
+      <input type="text" id="name" placeholder="Enter name" maxlength="6" />
+      <!-- maxlength giới hạn ký tự -->
+
+      <input type="text" value="KH001" readonly />
+      <input type="text" value="KH002" disabled />
+      <!-- disabled có thể sử dụng cho nhiều thẻ khác ví dụ thẻ <a> -->
+
+      <br />
+      <br />
+
+      <input
+        type="number"
+        name="number"
+        id=""
+        placeholder="Enter number"
+        min="1"
+        max="3"
+      />
+      <!-- min max giới hạn number ở button tăng giảm  -->
+
+      <input
+        type="password"
+        name="password"
+        id=""
+        placeholder="Enter password"
+        size="50"
+      />
+      <!-- size giúp điều chỉnh độ dài của thẻ input -->
+
+      <input type="email" name="email" id="" placeholder="Enter email" />
+
+      <input type="text" placeholder="Enter Address" required />
+      <!-- required yêu cầu người dùng nhập dữ liệu -->
+
+      <input
+        type="tel"
+        name=""
+        id=""
+        pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
+        placeholder="123-12-123"
+      />
+      <!-- pattern định dạng kiểu hiển thị check validation yêu cầu nhập đúng định dạng-->
+
+      <input type="date" name="" id="" />
+      <input type="file" name="" id="" />
+
+      <br />
+      <br />
+
+      <textarea name="" id="" cols="30" rows="10"></textarea>
+
+      <!-- combo box / dropdown -->
+      <select name="" id="">
+        <option value="">Chọn loại xe</option>
+        <option value="">Honda</option>
+        <option value="">Yamaha</option>
+      </select>
+
+      <select name="" id="" multiple>
+        <!-- multiple giúp chọn nhiều loại giá trị -->
+        <option value="">Chọn nhiều loại xe</option>
+        <option value="">Honda</option>
+        <option value="">Yamaha</option>
+      </select>
+
+      <select name="" id="">
+        <option value="">Chọn loại xe</option>
+        <optgroup>
+          <option value="">Chọn xe máy</option>
+          <option value="">Honda</option>
+          <option value="">Yamaha</option>
+        </optgroup>
+        <optgroup>
+          <option value="">Chọn xe đạp</option>
+          <option value="">martin</option>
+          <option value="">pega</option>
+        </optgroup>
+      </select>
+
+      <input type="checkbox" name="Subject" id="math" value="math" />
+      <label for="math">math</label>
+
+      <input type="checkbox" name="Subject" id="history" value="history" />
+      <label for="history">history</label>
+
+      <input type="checkbox" name="Subject" id="bio" value="bio" />
+      <label for="bio">bio</label>
+
+      <input type="checkbox" name="Subject" id="phy" value="phy" />
+      <label for="phy">phy</label>
+
+      <br />
+
+      <input type="radio" name="gender" id="male" value="m" />
+      <label for="male">male</label>
+
+      <input type="radio" name="gender" id="female" value="f" />
+      <label for="female">female</label>
+
+      <input type="radio" name="gender" id="orther" value="o" />
+      <label for="orther">orther</label>
+
+      <br />
+
+      <fieldset style="border-color: black">
+        <legend>Thông tin cá nhân</legend>
+        <input type="text" placeholder="full name" />
+      </fieldset>
+
+      <br />
+      <br />
+
+      <button type="submit">Submit</button>
+      <input type="button" value="Button" />
+      <input type="reset" value="Reset" />
+    </form>
+  </body>
+</html>

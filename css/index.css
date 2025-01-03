@@ -129,6 +129,24 @@ h2 {
   padding: 23px 0;
 }
 
+.carousel button:hover {
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+  animation: upDown 1s linear 0s infinite;
+  /* animation: upDown2 1s linear 0s infinite; */
+}
+
+.carousel__content:hover button {
+  /* direction */
+  /* animation: upDown3 2s 2 reverse; */
+  /* animation: upDown3 2s 2 alternate; */
+  /* animation: upDown3 2s 2 alternate-reverse; */
+
+  /* fill-mode */
+  /* animation: upDown3 2s 1 forwards; */
+  /* animation: upDown3 2s 1s backwards; */
+  /* animation: upDown3 2s 1s both; */
+}
+
 /* intro */
 .intro {
   /* grid */
@@ -493,6 +511,59 @@ h2 {
   border-color: #ff0e83;
 }
 
+.team__item-2 {
+  overflow: hidden;
+}
+
+.team__item-2 .team__detail {
+  opacity: 1;
+  transform: translateX(-100%);
+}
+
+.team__item-2:hover .team__detail {
+  transform: translateX(0);
+}
+
+.team__item-3 {
+  overflow: hidden;
+}
+
+.team__item-3 .team__detail {
+  opacity: 1;
+  transform: translateY(-100%);
+}
+
+.team__item-3:hover .team__detail {
+  transform: translateY(0);
+}
+
+.team__item-4 .team__detail {
+  /* opacity: 1; */
+  transform: rotate(0deg);
+}
+
+.team__item-4:hover .team__detail {
+  transform: rotate(360deg);
+}
+
+.team__item-5 .team__detail {
+  /* opacity: 1; */
+  transform: scale(0);
+}
+
+.team__item-5:hover .team__detail {
+  transform: scale(1);
+}
+
+.team__item-6 .team__detail {
+  /* opacity: 1; */
+  transform: skewx(30deg);
+}
+
+.team__item-6:hover .team__detail {
+  transform: skewx(0);
+}
+
 /* feedback */
 .feedback {
   padding: 70px 0;
@@ -743,4 +814,39 @@ footer {
   font-weight: bold;
   /* border-radius: 50%; */
   border-radius: 50%;
+}
+
+/* Khai báo chuỗi chuyển động */
+@keyframes upDown {
+  /* 100s */
+  0% {
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes upDown2 {
+  /* 100s */
+  form {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(50px);
+  }
+}
+
+@keyframes upDown3 {
+  /* 100s */
+  0% {
+    transform: translateY(0) scale(1);
+    background-color: red;
+  }
+  100% {
+    transform: translateY(50px) scale(1.2);
+    background-color: yellow;
+  }
 }

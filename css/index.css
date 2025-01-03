@@ -14,6 +14,7 @@ html {
   /* 1rem = 16px */
 
   font-size: 16px;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -45,6 +46,9 @@ button:hover {
 header {
   background-color: #4e2a84;
   padding: 20px 0;
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
 }
 
 h2 {
@@ -123,6 +127,24 @@ h2 {
 .carousel__content p {
   font-size: 1.1rem;
   padding: 23px 0;
+}
+
+.carousel button:hover {
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+  animation: upDown 1s linear 0s infinite;
+  /* animation: upDown2 1s linear 0s infinite; */
+}
+
+.carousel__content:hover button {
+  /* direction */
+  /* animation: upDown3 2s 2 reverse; */
+  /* animation: upDown3 2s 2 alternate; */
+  /* animation: upDown3 2s 2 alternate-reverse; */
+
+  /* fill-mode */
+  /* animation: upDown3 2s 1 forwards; */
+  /* animation: upDown3 2s 1s backwards; */
+  /* animation: upDown3 2s 1s both; */
 }
 
 /* intro */
@@ -489,6 +511,59 @@ h2 {
   border-color: #ff0e83;
 }
 
+.team__item-2 {
+  overflow: hidden;
+}
+
+.team__item-2 .team__detail {
+  opacity: 1;
+  transform: translateX(-100%);
+}
+
+.team__item-2:hover .team__detail {
+  transform: translateX(0);
+}
+
+.team__item-3 {
+  overflow: hidden;
+}
+
+.team__item-3 .team__detail {
+  opacity: 1;
+  transform: translateY(-100%);
+}
+
+.team__item-3:hover .team__detail {
+  transform: translateY(0);
+}
+
+.team__item-4 .team__detail {
+  /* opacity: 1; */
+  transform: rotate(0deg);
+}
+
+.team__item-4:hover .team__detail {
+  transform: rotate(360deg);
+}
+
+.team__item-5 .team__detail {
+  /* opacity: 1; */
+  transform: scale(0);
+}
+
+.team__item-5:hover .team__detail {
+  transform: scale(1);
+}
+
+.team__item-6 .team__detail {
+  /* opacity: 1; */
+  transform: skewx(30deg);
+}
+
+.team__item-6:hover .team__detail {
+  transform: skewx(0);
+}
+
 /* feedback */
 .feedback {
   padding: 70px 0;
@@ -617,4 +692,161 @@ h2 {
 .contact__info-item p {
   font-size: 0.8rem;
   margin: 10px 0;
+}
+
+/* footer */
+footer {
+  padding: 50px 0;
+  background-color: black;
+  color: white;
+}
+
+.footer__main {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  padding-bottom: 50px;
+}
+
+.footer__item {
+  width: calc(100% / 4);
+  padding: 0 20px;
+}
+
+.footer__item h3 {
+  font-size: 1.3rem;
+  color: #ff0e83;
+  margin-bottom: 1rem;
+}
+
+.footer__item p {
+  font-size: 0.8rem;
+  line-height: 28px;
+  padding-bottom: 1rem;
+}
+
+.footer__item .footer__socials i {
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  border: 1px solid white;
+  text-align: center;
+  margin-right: 10px;
+  transition: all 0.5s;
+}
+
+.footer__item .footer__socials i:hover {
+  color: #ff0e83;
+  border-color: #ff0e83;
+}
+
+.footer__time {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px dotted white;
+}
+
+.footer__time p {
+  padding: 0;
+  margin: 10px 0;
+}
+
+.footer__item .footer__sub input {
+  padding: 10px;
+  margin-bottom: 16px;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+.footer__item .footer__sub input:focus {
+  outline: none;
+}
+
+.footer__item .footer__sub button {
+  margin-bottom: 24px;
+  padding: 7px 16px;
+  color: black;
+  border-color: #ff0e83;
+  font-weight: 700;
+}
+
+.footer__item .footer__sub button:hover {
+  border-color: black;
+}
+
+.footer__copyright {
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.footer__copyright span {
+  color: #ff0e83;
+}
+
+/* Back To Top */
+.backToTop {
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  visibility: hidden;
+  opacity: 1;
+}
+
+.cd-top--is-visible {
+  /* back-to-top button visible */
+  visibility: visible;
+  opacity: 1;
+}
+
+.cd-top--fade-out {
+  /* // reduce button opacity if user keeps scrolling */
+  /* opacity: 0.5; */
+}
+
+.backToTop i {
+  border: 2px solid #0bbbcc;
+  color: #0bbbcc;
+  width: 40px;
+  height: 40px;
+  line-height: 36px;
+  font-size: 2rem;
+  text-align: center;
+  font-weight: bold;
+  /* border-radius: 50%; */
+  border-radius: 50%;
+}
+
+/* Khai báo chuỗi chuyển động */
+@keyframes upDown {
+  /* 100s */
+  0% {
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes upDown2 {
+  /* 100s */
+  form {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(50px);
+  }
+}
+
+@keyframes upDown3 {
+  /* 100s */
+  0% {
+    transform: translateY(0) scale(1);
+    background-color: red;
+  }
+  100% {
+    transform: translateY(50px) scale(1.2);
+    background-color: yellow;
+  }
 }

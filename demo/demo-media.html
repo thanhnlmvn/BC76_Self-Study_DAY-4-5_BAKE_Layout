@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .svg1 {
+        border: 1px solid #666;
+        width: 400px;
+        height: 300px;
+      }
+      .svg1 rect {
+        fill: red;
+        stroke: black;
+        stroke-width: 4px;
+        width: 150px;
+        height: 150px;
+      }
+      .svg2 {
+        width: 400px;
+        height: 300px;
+      }
+      .svg2 circle {
+        fill: red;
+      }
+      .svg2 text {
+        fill: white;
+        font-size: 70px;
+        font-weight: 700px;
+      }
+    </style>
+  </head>
+  <body>
+    <video
+      width="320"
+      height="240"
+      controls
+      preload="none"
+      loop="true"
+      autoplay
+      muted
+    >
+      <!-- controls giúp hiển thị các button sử dụng cho video như pause, skip,... -->
+      <!-- preload giúp điều chỉnh chạy video khi vào trang web -->
+      <!-- loop giúp video phát lại sau khi đã phát xong -->
+      <!-- autoplay giúp vào trang web video sẽ tự động phát tùy trình duyệt chỉ khi sử dụng muted mới sử dụng đc autoplay -->
+      <!-- muted giúp tắt âm video  -->
+      <source src="./asset/video.mp4" type="video/mp4" />
+    </video>
+
+    <audio controls>
+      <source src="./asset/Magnetic-ILLIT-14205034.mp3" type="audio/mpeg" />
+    </audio>
+
+    <svg class="svg1">
+      <rect x="100px" y="50px" rx="10px" ry="10px"></rect>
+    </svg>
+
+    <svg class="svg2">
+      <circle cx="200px" cy="150px" r="80px"></circle>
+      <text x="150px" y="172px">GF</text>
+    </svg>
+  </body>
+</html>

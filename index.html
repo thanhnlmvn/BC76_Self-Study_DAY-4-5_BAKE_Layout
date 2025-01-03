@@ -38,20 +38,20 @@
       <div class="header__content">
         <p>BAKE</p>
         <nav>
-          <ul>
+          <ul id="mainNav">
             <li class="active"><a href="#">HOME</a></li>
-            <li><a href="#">ABOUT</a></li>
-            <li><a href="#">SERVICE</a></li>
-            <li><a href="#">GALLERY</a></li>
-            <li><a href="#">CLIENT</a></li>
-            <li><a href="#">CONTACT</a></li>
+            <li><a href="#intro">ABOUT</a></li>
+            <li><a href="#services">SERVICE</a></li>
+            <li><a href="#gallery">GALLERY</a></li>
+            <li><a href="#feedback">CLIENTS</a></li>
+            <li><a href="#contact">CONTACT</a></li>
           </ul>
         </nav>
       </div>
     </header>
 
     <!-- carousel -->
-    <section class="carousel">
+    <section class="carousel" id="carousel">
       <div class="carousel__content">
         <h1>Best Bake Here</h1>
         <p>Donec at massa nec sem eleifend fermentum.</p>
@@ -60,7 +60,7 @@
     </section>
 
     <!-- intro -->
-    <section class="intro">
+    <section class="intro" id="intro">
       <div class="intro__item intro__text">
         <div>
           <h3>Tradition</h3>
@@ -122,7 +122,7 @@
     </section>
 
     <!-- number -->
-    <section class="number">
+    <section class="number" id="number">
       <div class="number__content">
         <div class="number__item">
           <p class="counter">3500</p>
@@ -144,7 +144,7 @@
     </section>
 
     <!-- services -->
-    <section class="services">
+    <section class="services" id="services">
       <h2>OUR SERVICES</h2>
       <div class="services__content">
         <div class="services__item">
@@ -175,7 +175,7 @@
     </section>
 
     <!-- gallery -->
-    <section class="gallery">
+    <section class="gallery" id="gallery">
       <h2>OUR GALLERY</h2>
       <div class="gallery__content">
         <figure class="gallery__item gallery__g1">
@@ -236,7 +236,7 @@
     </section>
 
     <!-- team -->
-    <section class="team">
+    <section class="team" id="team">
       <h2>BAKE TEAM</h2>
       <div class="team__content">
         <div class="team__item">
@@ -363,7 +363,7 @@
     </section>
 
     <!-- feedback -->
-    <section class="feedback">
+    <section class="feedback" id="feedback">
       <h2>TESTIMONIALS</h2>
       <div class="feedback__content">
         <div class="owl-carousel owl-theme">
@@ -399,7 +399,7 @@
     </section>
 
     <!-- contact -->
-    <section class="contact">
+    <section class="contact" id="contact">
       <h2>CONTACT</h2>
       <div class="contact__form">
         <form action="">
@@ -518,6 +518,11 @@
       </div>
     </footer>
 
+    <!-- Back To Top -->
+    <a href="#" class="backToTop cd-top text-replace js-cd-top">
+      <i class="fa-solid fa-angle-up"></i>
+    </a>
+
     <!-- Thư viện hỗ trợ Jquery giúp  chạy hiệu ứng của các thư viện animation -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
@@ -556,6 +561,30 @@
           },
         },
       });
+    </script>
+
+    <!-- Back To Top JS -- CodyHouse -->
+    <script src="./js/util.js"></script>
+    <script src="./js/main-backToTop.js"></script>
+
+    <!-- Navigation bar JS -->
+    <script>
+      // thẻ ul
+      var mainNav = document.getElementById('mainNav');
+      // console.log(mainNav);
+      // Các thẻ con li
+      var listNav = mainNav.getElementsByTagName('li');
+      // console.log(listNav);
+      for (var i = 0; i < listNav.length; i++) {
+        listNav[i].addEventListener('click', function () {
+          // tìm thẻ đang được gắn class active
+          var current = document.querySelector('#mainNav .active');
+          // Xóa class active của thẻ đang được gắn
+          current.className = current.className.replace('active', '');
+          // Thêm class active vào cho thẻ li được click
+          this.className += 'active';
+        });
+      }
     </script>
   </body>
 </html>
